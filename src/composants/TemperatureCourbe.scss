@@ -1,0 +1,17 @@
+//bloc avec la courbe de temperature
+.temperature-courbe {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    margin: 0;
+    color: #3C8FA9;
+  }
+
+  #myChart {
+    align-self: center;
+    width: 100%;
+  }
+
+} //fin du bloc avec la courbe de temperature

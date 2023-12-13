@@ -1,0 +1,19 @@
+//entete
+.entete {
+  height: 75px;
+  background-color: rgba(255, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    color: #68C6E4;
+
+    @media screen and (min-width: 998px) {
+      color: white;
+    }
+
+  }
+
+} // fin entete

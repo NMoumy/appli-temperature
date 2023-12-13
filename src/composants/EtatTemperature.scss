@@ -1,0 +1,13 @@
+//bloc avec l'etat de la temperature ambiente
+.etat-temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: #3C8FA9;
+    margin: 0;
+  }
+
+}//fin du bloc avec l'etat de la temperature ambiente

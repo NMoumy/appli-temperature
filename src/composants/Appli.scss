@@ -1,0 +1,23 @@
+.Appli {
+  // background-color: rgb(255, 194, 194);
+  padding-bottom: 75px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.bloc {
+  background-color: #d9e4f473;
+  padding: 15px;
+  border-radius: 15px;
+  height: 100px;
+  width: 80%;
+
+  @media screen and (min-width: 998px) {
+    width: 50%;
+  }
+  
+}

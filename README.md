@@ -7,7 +7,7 @@ L'application Température Local est une application React monopage qui affiche 
 - Affiche la température actuelle en temps réel.
 - Indique si la température est au-dessus, en dessous ou à la température ambiante.
 - Affiche une icône différente en fonction de l'état de la température.
-- Affiche une courbe avec les changements de température.
+- Affiche un graphique avec les changements de température.
 
 ## Technologie utilisée
 

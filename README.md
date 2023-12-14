@@ -1,6 +1,6 @@
 # Température Local
 
-L'application Température Local est une application React monopage qui affiche en temps réel la température et l'humidité provenant d'un capteur SHT30 connecté à un ESP32. Elle utilise Firebase pour stocker et récupérer les données de température.(Important il faut que le esp32 sois connecter pour voir les changements)
+L'application Température Local est une application React monopage qui affiche en temps réel la température et l'humidité provenant d'un capteur SHT30 connecté à un ESP32. Elle utilise Firebase pour stocker et récupérer les données de température. (Important il faut que le esp32 sois connecter pour voir les changements)
 
 ## Fonctionnalités
 

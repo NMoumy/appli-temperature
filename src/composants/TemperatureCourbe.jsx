@@ -1,17 +1,17 @@
-import './TemperatureCourbe.scss';
 import Chart from 'chart.js/auto';
+import './TemperatureCourbe.scss';
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
-
+import { obtenirDerniereDonneeTemperature } from '../data/donnee-modele';
 
 export default function TemperatureCourbe() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
-      const temperature = Math.random() * 10 + 20; // Remplacez par la température réelle
+    const now = new Date();
+    const time = now.getHours() + ':' + now.getMinutes();
+
+    const desinscrire = obtenirDerniereDonneeTemperature((temperature) => {
       setData(prevData => {
         let newData = [...prevData, { time, temperature }];
         if (newData.length > 10) {
@@ -22,7 +22,7 @@ export default function TemperatureCourbe() {
         localStorage.setItem('temperatureData', JSON.stringify(newData));
         return newData;
       });
-    }, 1000); // Mise à jour toutes les 10 minutes
+    });
 
     // Récupérer les données du localStorage lors de l'initialisation du composant
     const savedData = JSON.parse(localStorage.getItem('temperatureData'));
@@ -30,9 +30,9 @@ export default function TemperatureCourbe() {
       setData(savedData);
     }
 
-    return () => clearInterval(interval);
+    return () => desinscrire();
   }, []);
-  
+
   const chartData = {
     labels: data.map(d => d.time),
     datasets: [

@@ -36,5 +36,6 @@ FirebaseConfig config;
 
 ## Crédits
 
+```
 Ce projet s'inspire du code de [Random Nerd Tutorials](https://randomnerdtutorials.com/) et de la vidéo de [YouTube](https://www.youtube.com/your-youtube-video-link).
 

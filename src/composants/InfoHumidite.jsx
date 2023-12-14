@@ -19,7 +19,7 @@ export default function InfoHumidite() {
   return (
     <div className="bloc info-humidite">
       <div className="icone-humidite">
-        <img src={humiditeImage} alt="image humidite" />
+        <img src={humiditeImage} alt="icone humidite" />
       </div>
       <div className="texte-humidite">
         <h3>humidité</h3>

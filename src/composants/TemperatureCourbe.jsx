@@ -1,4 +1,4 @@
-import Chart from 'chart.js/auto';
+// import Chart from 'chart.js/auto';
 import './TemperatureCourbe.scss';
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
@@ -48,7 +48,7 @@ export default function TemperatureCourbe() {
 
   return (
     <div className="bloc temperature-courbe">
-      <h4>Temperature</h4>
+      <h4>Température</h4>
       <Line data={chartData} />
     </div>
   );

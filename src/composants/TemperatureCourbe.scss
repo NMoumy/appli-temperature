@@ -1,10 +1,14 @@
 //bloc avec la courbe de temperature
 .temperature-courbe {
-  height: 500px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 998px) {
+    height: 500px;
+  }
   
   h4 {
     margin: 0;

@@ -10,7 +10,7 @@ export default function TemperatureCourbe() {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      const time = now.getHours() + ':' + now.getMinutes();
+      const time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
       const temperature = Math.random() * 10 + 20; // Remplacez par la température réelle
       setData(prevData => {
         let newData = [...prevData, { time, temperature }];
@@ -18,13 +18,21 @@ export default function TemperatureCourbe() {
           // Supprimer la première valeur si la longueur est déjà de 10
           newData = newData.slice(1);
         }
+        // Stocker les données dans le localStorage
+        localStorage.setItem('temperatureData', JSON.stringify(newData));
         return newData;
       });
     }, 1000); // Mise à jour toutes les 10 minutes
 
+    // Récupérer les données du localStorage lors de l'initialisation du composant
+    const savedData = JSON.parse(localStorage.getItem('temperatureData'));
+    if (savedData) {
+      setData(savedData);
+    }
+
     return () => clearInterval(interval);
   }, []);
-
+  
   const chartData = {
     labels: data.map(d => d.time),
     datasets: [

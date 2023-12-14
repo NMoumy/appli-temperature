@@ -10,11 +10,11 @@ import TemperatureCourbe from './TemperatureCourbe';
 export default function Appli() {
   return (
     <div className="Appli">
-        <Entete />
-        <InfoTemperature />
-        <EtatTemperature />
-        <InfoHumidite />
-        <TemperatureCourbe />
+      <Entete />
+      <InfoTemperature />
+      <EtatTemperature />
+      <TemperatureCourbe />
+      <InfoHumidite />
     </div>
   );
 }

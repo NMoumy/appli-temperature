@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './InfoTemperature.scss';
-import imgArrierePlan from '../images/imgArrierePlan.jpg'; // Assurez-vous que le chemin est correct
-import ambient from '../images/ambient.png'; // Assurez-vous que le chemin est correct
-import { obtenirDerniereDonneeTemperature } from '../data/donnee-modele'; // Assurez-vous que le chemin d'importation est correct
+import imgArrierePlan from '../images/imgArrierePlan.jpg'; 
+import ambient from '../images/ambient.png'; 
+import dessous from '../images/dessous.png'; 
+import dessus from '../images/dessus.png'; 
+import { obtenirDerniereDonneeTemperature } from '../data/donnee-modele'; 
 
-export default function InfoTemperature() {
+export default function InfoTemperature({ temperatureAmbiante }) {
   const [temperature, setTemperature] = useState(null);
+  let iconeTemperature;
 
   useEffect(() => {
     const desinscrire = obtenirDerniereDonneeTemperature((nouvelleTemperature) => {
@@ -14,6 +17,20 @@ export default function InfoTemperature() {
 
     return () => desinscrire();
   }, []);
+
+
+  if (temperature === null) {
+    iconeTemperature = ambient;
+  } 
+  else if (temperature > temperatureAmbiante.max) {
+    iconeTemperature = dessus;
+  } 
+  else if (temperature < temperatureAmbiante.min) {
+    iconeTemperature = dessous;
+  } 
+  else {
+    iconeTemperature = ambient;
+  }
 
   return (
     <div className="info-temperature">
@@ -30,7 +47,7 @@ export default function InfoTemperature() {
       </div>
 
       <div className="icone-temperature">
-        <img src={ambient} alt="icone temperature ambiente" />
+        <img src={iconeTemperature} alt="icone temperature" />
       </div>
     </div>
   );

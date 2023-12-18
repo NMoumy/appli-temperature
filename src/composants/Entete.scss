@@ -6,14 +6,25 @@
   justify-content: center;
   align-items: center;
 
-  h2 {
-    margin: 0;
-    color: #68C6E4;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @media screen and (min-width: 998px) {
-      color: white;
+    img {
+      height: 40px;
+      width: 40px;
     }
 
+    h2 {
+      margin: 0;
+      color: #f6002f;
+  
+      @media screen and (min-width: 998px) {
+        color: white;
+      }
+  
+    }
   }
 
 } // fin entete

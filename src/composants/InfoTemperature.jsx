@@ -42,7 +42,7 @@ export default function InfoTemperature({ temperatureAmbiante }) {
 
         <div className="position">
           <div className="icone-position"></div>
-          <h3>Local 0000</h3>
+          <h3>Local B1166</h3>
         </div>
       </div>
 

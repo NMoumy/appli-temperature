@@ -7,6 +7,7 @@ export default function ChangeTemperature({ changerTemperature }) {
   const gererSoumission = (evenement) => {
     evenement.preventDefault();
     changerTemperature(nouvelleTemperature);
+    alert(`La température ambiante a été changée à Min: ${nouvelleTemperature.min}, Max: ${nouvelleTemperature.max}. Si vous rafraîchissez la page, vous reviendrez à la température de base.`);
   };
 
   return (

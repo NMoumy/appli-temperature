@@ -1,0 +1,44 @@
+.change-temperature {
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #3C8FA9;
+  }
+  
+  & label {
+    margin-bottom: 10px;
+  }
+  
+  & input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    width: 100%;
+    color: #3C8FA9;
+
+    &:focus {
+      outline: none;
+      border-color: #67C6E4;
+      box-shadow: 0 0 5px #67C6E4;
+    }
+    
+  }
+  
+  & input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    color: white;
+    background-color: #67C6E4;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  & input[type="submit"]:hover {
+    background-color: #56aec8;
+  }
+}

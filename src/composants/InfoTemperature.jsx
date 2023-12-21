@@ -38,7 +38,7 @@ export default function InfoTemperature({ temperatureAmbiante }) {
 
       <div className="texte-temperature">
         <h4>{new Date().toLocaleDateString()}</h4>
-        <h2>{temperature ? `${Math.floor(temperature)}°C` : 'Chargement...'}</h2>
+        <h2>{temperature ? `${Math.floor(temperature)}°C` : '0°C'}</h2>
 
         <div className="position">
           <div className="icone-position"></div>

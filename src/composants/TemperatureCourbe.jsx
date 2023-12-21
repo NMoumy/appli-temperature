@@ -40,15 +40,15 @@ export default function TemperatureCourbe() {
         label: 'Temperature',
         data: data.map(d => d.temperature),
         fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: '#FDFEFF',
+        borderColor: '#67C6E4',
       },
     ],
   };
 
   return (
     <div className="bloc temperature-courbe">
-      <h4>Température</h4>
+      <h4>Graphique de la température</h4>
       <Line data={chartData} />
     </div>
   );

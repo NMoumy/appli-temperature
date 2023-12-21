@@ -40,8 +40,8 @@ export default function TemperatureCourbe() {
         label: 'Temperature',
         data: data.map(d => d.temperature),
         fill: false,
-        backgroundColor: '#FDFEFF',
-        borderColor: '#67C6E4',
+        backgroundColor: '#67C6E4',
+        borderColor: '#67c7e467',
       },
     ],
   };

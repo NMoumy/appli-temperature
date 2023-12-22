@@ -34,8 +34,8 @@ FirebaseData fbdo;
 FirebaseAuth auth;
 FirebaseConfig config;
 
+```
 ## Crédits
 
-```
 Ce projet s'inspire du code de [Random Nerd Tutorials](https://randomnerdtutorials.com/) et de la vidéo de [Education is Life](https://www.youtube.com/watch?v=aO92B-K4TnQ).
 
